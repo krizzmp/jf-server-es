@@ -1,0 +1,48 @@
+# For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection).
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET request with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
+
+POST http://0.0.0.0:8080/members/2805922037/name
+Content-Type: application/json
+
+{
+  "name": "Dembe",
+  "commitMsg":"commit"
+}
+
+###
+
+POST http://0.0.0.0:8080/members/revert/name
+Content-Type: application/json
+
+{
+  "commitMsg": "commit",
+  "name": "Dembe",
+  "oldName": "kristoffer",
+  "id": "2805922037",
+  "type": "NameUpdated",
+  "eventId": "2"
+}
+
+###
+
+GET http://0.0.0.0:8080/members
+Content-Type: application/json
+
+###
+
+POST http://0.0.0.0:8080/members
+Content-Type: application/json
+
+{
+  "id": "2805922039",
+  "name": "hjalte"
+}
+###
+
+GET http://0.0.0.0:8080/members/2805922037/events
+
+###
